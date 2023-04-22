@@ -1,11 +1,6 @@
 let inputDirection = { x: 0, y: 0 };
 let lastInputDirection = { x: 0, y: 0 };
 
-export const getInputDirection = () => {
-  lastInputDirection = inputDirection;
-  return inputDirection;
-};
-
 window.addEventListener("keydown", (e) => {
   if (e.key === "ArrowUp") {
     if (lastInputDirection.y !== 0) return;
@@ -24,3 +19,8 @@ window.addEventListener("keydown", (e) => {
     inputDirection = { x: 1, y: 0 };
   }
 });
+
+export const getInputDirection = () => {
+  lastInputDirection = inputDirection;
+  return inputDirection;
+};

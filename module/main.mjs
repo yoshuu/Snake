@@ -43,7 +43,6 @@ window.requestAnimationFrame(main);
 const update = () => {
   snakeUpdate();
   foodUpdate();
-
   checkDeath();
 };
 const draw = () => {
